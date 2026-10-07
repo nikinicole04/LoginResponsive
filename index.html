@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminExpress - Sign In</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Lado Izquierdo: Branding (solo desktop) -->
+        <div class="branding-side">
+            <h1 class="brand-logo">AdminExpress</h1>
+        </div>
+
+        <!-- Lado Derecho: Formulario -->
+        <div class="form-side">
+            <div class="form-wrapper">
+
+                <h2 class="form-title">Let's <strong>Sign In</strong> <span class="wave">👇</span></h2>
+                <p class="form-subtitle">Hey, Enter your details to get sign in <br>to your account.</p>
+
+                <form class="login-form" action="#" method="POST">
+
+                    <!-- Email -->
+                    <div class="input-group">
+                        <label for="email" class="input-label">Email</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                            </span>
+                            <input type="email" id="email" placeholder="Enter Email" data-mobile-placeholder="Email" required>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="input-group">
+                        <label for="password" class="input-label">Password</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="4" y="11" width="16" height="11" rx="2" ry="2"/>
+                                    <path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none"/>
+                                </svg>
+                            </span>
+                            <input type="password" id="password" placeholder="Enter Password" data-mobile-placeholder="Password" required>
+                            <span class="toggle-password" onclick="togglePassword()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                                    <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                                    <path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/>
+                                    <line x1="1" y1="1" x2="23" y2="23"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Forgot Password -->
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <!-- Sign In Button -->
+                    <button type="submit" class="btn-signin"><span class="desktop-text">Sign In</span><span class="mobile-text">Sign in</span></button>
+
+                </form>
+
+                <!-- Sign Up Link (solo mobile) -->
+                <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+

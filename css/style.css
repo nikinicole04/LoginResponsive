@@ -1,0 +1,295 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f7;
+    color: #1a1a2e;
+    min-height: 100vh;
+}
+
+/* ============================================
+   CONTAINER PRINCIPAL - CSS GRID
+   ============================================ */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ============================================
+   LADO IZQUIERDO - BRANDING (AZUL)
+   ============================================ */
+.branding-side {
+    background-color: #0b5fdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.brand-logo {
+    color: #ffffff;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   LADO DERECHO - FORMULARIO
+   ============================================ */
+.form-side {
+    background-color: #f5f5f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 440px;
+}
+
+/* ============================================
+   TÍTULOS
+   ============================================ */
+.form-title {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #1a1a2e;
+    margin-bottom: 22px;
+}
+
+.form-title strong {
+    font-weight: 700;
+}
+
+.wave {
+    font-size: 1.5rem;
+}
+
+.form-subtitle {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   FORMULARIO - INPUTS
+   ============================================ */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    padding-left: 18px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1.5px solid transparent;
+    border-radius: 12px;
+    padding: 15px 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: #0b5fdc;
+    box-shadow: 0 0 0 3px rgba(11, 95, 220, 0.1);
+}
+
+.input-icon {
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+    font-family: inherit;
+    color: #1a1a2e;
+    background: transparent;
+}
+
+.input-wrapper input::placeholder {
+    color: #9ca3af;
+}
+
+.toggle-password {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+/* ============================================
+   FORGOT PASSWORD
+   ============================================ */
+.forgot-password {
+    text-align: right;
+    margin-top: 4px;
+}
+
+.forgot-password a {
+    font-size: 0.8rem;
+    color: #0b5fdc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   BOTÓN SIGN IN
+   ============================================ */
+.btn-signin {
+    background-color: #0b5fdc;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 17px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 26px;
+    width: 180px;
+}
+
+.btn-signin:hover {
+    background-color: #0a4fb8;
+    transform: translateY(-1px);
+}
+
+.btn-signin:active {
+    transform: translateY(0);
+}
+
+.mobile-text {
+    display: none;
+}
+
+/* ============================================
+   SIGN UP LINK (oculto en desktop)
+   ============================================ */
+.signup-link {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #6b7280;
+    display: none;
+}
+
+.signup-link a {
+    color: #0b5fdc;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   📱 MEDIA QUERIES - RESPONSIVE
+   ============================================ */
+
+/* Tablet y mobile: 768px y menos */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .branding-side {
+        display: none;
+    }
+
+    .form-side {
+        align-items: flex-start;
+        padding: 80px 24px 40px;
+    }
+
+    .form-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .form-subtitle {
+        margin-bottom: 30px;
+    }
+
+    .login-form {
+        gap: 24px;
+    }
+
+    /* En mobile no hay labels, solo placeholders */
+    .input-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+    .forgot-password {
+        margin-top: -14px;
+    }
+
+    .btn-signin {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .desktop-text {
+        display: none;
+    }
+
+    .mobile-text {
+        display: inline;
+    }
+
+    .signup-link {
+        display: block;
+    }
+}
+
+/* Mobile pequeño: 480px y menos */
+@media screen and (max-width: 480px) {
+    .form-side {
+        padding: 60px 20px 30px;
+    }
+
+    .form-title {
+        font-size: 1.45rem;
+    }
+}
